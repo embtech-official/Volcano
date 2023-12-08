@@ -1,0 +1,40 @@
+#include <dt-bindings/clock/imx8mm-clock.h>
+#include <dt-bindings/reset/imx8mq-reset.h>
+#include <dt-bindings/gpio/gpio.h>
+#include <dt-bindings/input/input.h>
+#include <dt-bindings/interrupt-controller/arm-gic.h>
+#include <dt-bindings/reset/imx8mm-dispmix.h>
+#include <dt-bindings/thermal/thermal.h>
+#include <imx8mm-pinfunc.h>
+
+/dts-v1/;
+/plugin/;
+/ {
+	compatible = "toradex,verdin-imx8mm";
+};
+
+&iomuxc{
+	pinctrl-names = "default";
+	pinctrl-0 = <&pinctrl_gpio1>, <&pinctrl_gpio2>,
+		    <&pinctrl_gpio3>, <&pinctrl_gpio4>,
+		    <&pinctrl_gpio7>, <&pinctrl_gpio8>,
+		    <&pinctrl_gpio_hog1>, <&pinctrl_gpio_hog2>, <&pinctrl_gpio_hog3>,
+		    <&pinctrl_pmic_tpm_ena>;
+	pinctrl_flexspi0: flexspi0grp {
+                fsl,pins = <
+                        //MX8MM_IOMUXC_NAND_ALE_QSPI_A_SCLK               0x106   /* SODIMM 52 */
+                        //MX8MM_IOMUXC_NAND_CE0_B_QSPI_A_SS0_B            0x106   /* SODIMM 54 */
+                        MX8MM_IOMUXC_NAND_CE1_B_QSPI_A_SS1_B            0x106   /* SODIMM 64 */
+                        MX8MM_IOMUXC_NAND_DATA00_QSPI_A_DATA0           0x106   /* SODIMM 56 */
+                        MX8MM_IOMUXC_NAND_DATA01_QSPI_A_DATA1           0x106   /* SODIMM 58 */
+                        MX8MM_IOMUXC_NAND_DATA02_QSPI_A_DATA2           0x106   /* SODIMM 60 */
+                        MX8MM_IOMUXC_NAND_DATA03_QSPI_A_DATA3           0x106   /* SODIMM 62 */
+                        MX8MM_IOMUXC_NAND_DQS_QSPI_A_DQS                0x106	/* SODIMM 66 */
+
+                >;
+            };    
+
+};
+
+
+

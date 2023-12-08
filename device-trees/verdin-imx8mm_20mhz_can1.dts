@@ -1,0 +1,17 @@
+// SPDX-License-Identifier: GPL-2.0-or-later OR MIT
+/*
+ * Copyright 2022 Toradex
+ */
+
+// 20MHz CAN1 Crystal for Older Verdin iMX8M Mini Samples
+
+/dts-v1/;
+/plugin/;
+
+/ {
+	compatible = "toradex,verdin-imx8mm";
+};
+
+&clk40m {
+	clock-frequency = <20000000>;
+};
