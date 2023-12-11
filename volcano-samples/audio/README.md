@@ -1,6 +1,6 @@
 # Audio:
 
-If you have any doubts about how to connect a Speaker box on Volcano Board, consult Volcano Manual.
+If you have any doubts about how to connect a Speaker box on Volcano Board, consult the Volcano Manual.
 
 For this project you will need a Docker container with the following requirements:
 
@@ -23,7 +23,7 @@ Prerequisites:
 
 ## Changing Device-Tree:
 
-#### Getting Source Code:
+#### Getting the Source Code:
 
 To get the source code of the Toradex-supplied device tree files (including overlays), you need to clone two repositories:
 
@@ -112,13 +112,13 @@ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-nonwifi-dahlia.dts
 linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dev.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Mini:
+##### Changing Device-tree for the Verdin IMX8M Mini:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mm-verdin-wifi-dahlia.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Plus:
+##### Changing Device-tree for the Verdin IMX8M Plus:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dahlia.dts
@@ -151,9 +151,9 @@ Possible Output:
                       imx8mm-wm8904
 ```
 
-## Running Docker Container:
+## Running a Docker Container:
 
-Custom container build from Dockerfile:
+Custom container built from Dockerfile:
 
 ```bash
 docker run --rm -e ALSA_CARD=imx8mmwm8904 --group-add audio --device=/dev/snd:/dev/snd <username>/<name-of-image>
