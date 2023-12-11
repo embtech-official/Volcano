@@ -4,7 +4,7 @@
 
 1. A SoM with [TorizonCore](https://developer.toradex.com/torizon) installed
 
-2. Already maded the [Quickstart Guide - Toradex](https://developer-archives.toradex.com/getting-started)
+2. Already completed the [Quickstart Guide - Toradex](https://developer-archives.toradex.com/getting-started)
 
 3. Knowledge of [Device Tree Overlay on Torizon](https://developer.toradex.com/torizon/os-customization/use-cases/device-tree-overlays-on-torizon).
 
@@ -99,13 +99,13 @@ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-nonwifi-dahlia.dts
 linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dev.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Mini:
+##### Changing Device-tree for  the Verdin IMX8M Mini:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mm-verdin-wifi-dahlia.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Plus:
+##### Changing Device-tree for  the Verdin IMX8M Plus:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dahlia.dts
@@ -163,7 +163,7 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth.service
 ```
 
-#### Unblock Bluetooth:
+#### Unblocking Bluetooth:
 
 Verify if Bluetooth isn't in hardware or software blocked mode with this command: 
 
@@ -255,8 +255,6 @@ Using the Interactive Mode:
 ```bash
 bluetoothctl
 ```
-
-# 
 
 ## References:
 
