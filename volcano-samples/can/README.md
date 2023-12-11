@@ -1,8 +1,8 @@
 # Can:
 
-If you have any doubts about how to connect a CAN cable on Volcano Board, consult Volcano Manual.
+If you have any doubts about how to connect a CAN cable on Volcano Board, consult the Volcano Manual.
 
-For this project you will need a Docker container with the following requirements:
+For this project, you will need a Docker container with the following requirements:
 
 - can-utils.
 
@@ -115,13 +115,13 @@ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-nonwifi-dahlia.dts
 linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dev.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Mini:
+##### Changing Device-tree for  the Verdin IMX8M Mini:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mm-verdin-wifi-dahlia.dts
 ```
 
-##### Changing Device-tree for  Verdin IMX8M Plus:
+##### Changing Device-tree for  the Verdin IMX8M Plus:
 
 ```bash
 torizoncore-builder dt apply --include-dir linux/include --include-dir linux/arch/arm64/boot/dts/freescale/ linux/arch/arm64/boot/dts/freescale/imx8mp-verdin-wifi-dahlia.dts
@@ -197,7 +197,7 @@ Possible output:
 
 ## Running Docker Container:
 
-Custom container build from Dockerfile:
+Custom container built from Dockerfile:
 
 ```bash
 docker run -it --rm  --name=can-test --net=host --cap-add="NET_ADMIN" \         -v /dev:/dev -v /tmp:/tmp -v /run/udev/:/run/udev/ \        <username>/<name-of-image>
@@ -210,7 +210,7 @@ docker run -it --rm  --name=can-test --net=host --cap-add="NET_ADMIN" \         
 
 Now, inside your Docker Container : 
 
-One way to test if everything is OK with your CAN communication, you can do the following:
+One way to test if everything is OK with your CAN communication is to do the following:
 
 1. Use the `cansend <interface> <message>` to send CAN messages on a given interface. Like for example:
    
