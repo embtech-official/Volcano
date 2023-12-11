@@ -2,19 +2,19 @@
 
 ## Step 1:
 
-From the command-line, in your development PC, login to the Docker CLI:
+From the command line on your development PC, log in to the Docker CLI:
 
 ```bash
 docker login
 ```
 
-Follow the prompt with your Docker Hub credentials. Visit [Docker Hub page](https://hub.docker.com/) to create a Docker ID if you don't have credentials.
+Follow the prompt with your Docker Hub credentials. Visit the [Docker Hub page](https://hub.docker.com/) to create a Docker ID if you don't have credentials.
 
 ## Step 2:
 
 #### Enable Arm emulation
 
-Arm emulation makes it possible to run Arm instructions on Intel x86-64 architectures. That is, you can run binaries compiled for the Arm instruction set on an x86 computer.
+Arm emulation makes it possible to run Arm instructions on Intel x86-64 architectures. This allows you to run binaries compiled for the Arm instruction set on an x86 computer.
 
 To enable this emulation to be used with Docker, run the following command:
 
@@ -24,7 +24,7 @@ docker run --rm -it --privileged torizon/binfmt
 
 ## Step 3:
 
-Enter the  folder you have the Dockerfile and build the image:
+Navigate to the folder containing the Dockerfile and build the image:
 
 ```bash
 docker build --pull -t <username>/<name-of-image> .
