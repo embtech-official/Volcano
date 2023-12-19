@@ -27,7 +27,7 @@ We need to import the serial library inside ours .py file with the follwing line
 import serial
 ```
 
-Now we need to declare the serial port which we are using: 
+Now we need to declare the serial port which we are using, wich may vary depending on the module: 
 
 ```python
 rs485Port = serial.Serial('/dev/ttymxc1', baudrate = 115200)
